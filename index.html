@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LocaZUP</title>
+
+  <!-- Inicializa o Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
+
+  <!-- Adiciona o nosso JavaScript -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+  <script src="api.js" defer></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">LocaZUP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- <li class="nav-item active">
+                      <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                    </li> -->
+        <li class="nav-item active">
+          <a class="nav-link" href="">Consumo de API <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container mt-5">
+    <section class="endpoint">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon3">http://localhost:8080</span>
+        </div>
+        <input type="text" class="form-control" id="endpoint" aria-describedby="basic-addon3">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="fetch-button">Enviar</Enviar>
+        </div>
+      </div>
+    </section>
+
+    <section class="method-view">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="">GET</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">POST</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">PUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">DELETE</a>
+        </li>
+      </ul>
+
+      <div class="view" method="GET"></div>
+
+      <div class="view d-none" method="POST">
+        <div>
+          <label for="nome">Título do filme</label>
+          <input type="text" class="text" name="nome" placeholder="Título do Filme">
+        </div>
+        <div>
+          <label for="nome">Link para Imagem da Capa</label>
+          <input type="text" class="text" name="linkDaCapa" placeholder="Link para Imagem da Capa">
+        </div>
+        <div>
+          <label for="nome">Ano</label>
+          <input type="number" class="text" name="ano" placeholder="Ano">
+        </div>
+        <div>
+          <label for="nome">Duração</label>
+          <input type="number" class="text" name="duracao" placeholder="Duração">
+        </div>
+        <div>
+          <label for="nome">Gênero</label>
+          <input type="text" class="text" name="genero" placeholder="Gênero">
+        </div>
+        <div>
+          <label for="nome">Classificação Indicativa</label>
+          <input type="number" class="text" name="classificacaoIndicativa" placeholder="Classificação Indicativa">
+        </div>
+        <div>
+          <label for="nome">Quantidade Disponível</label>
+          <input type="number" class="text" name="quantidadeDisponivel" placeholder="Quantidade Disponível">
+        </div>
+      </div>
+
+      <div class="view d-none" method="PUT">
+        <div>
+          <label for="nome">Título do filme</label>
+          <input type="text" class="text" name="nome" placeholder="Título do Filme">
+        </div>
+        <div>
+          <label for="nome">Link para Imagem da Capa</label>
+          <input type="text" class="text" name="linkDaCapa" placeholder="Link para Imagem da Capa">
+        </div>
+        <div>
+          <label for="nome">Ano</label>
+          <input type="number" class="text" name="ano" placeholder="Ano">
+        </div>
+        <div>
+          <label for="nome">Duração</label>
+          <input type="number" class="text" name="duracao" placeholder="Duração">
+        </div>
+        <div>
+          <label for="nome">Gênero</label>
+          <input type="text" class="text" name="genero" placeholder="Gênero">
+        </div>
+        <div>
+          <label for="nome">Classificação Indicativa</label>
+          <input type="number" class="text" name="classificacaoIndicativa" placeholder="Classificação Indicativa">
+        </div>
+        <div>
+          <label for="nome">Quantidade Disponível</label>
+          <input type="number" class="text" name="quantidadeDisponivel" placeholder="Quantidade Disponível">
+        </div>
+      </div>
+
+      <div class="view d-none" method="DELETE"></div>
+
+      <textarea rows="20" readonly class="form-control mt-3 no-resize w-100" id="fetch-output"></textarea>
+    </section>
+  </main>
+
+</body>
+
+</html>
