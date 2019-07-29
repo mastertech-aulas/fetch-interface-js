@@ -14,6 +14,8 @@ const updateMethodViews = method => {
             view.classList.toggle('d-none', true);
         }
     }
+
+    fetchOutput.value = '';
 };
 
 const toggleMethod = e => {
